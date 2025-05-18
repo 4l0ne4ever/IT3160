@@ -1,0 +1,83 @@
+Description 
+---
+Mô hình tổng quát quy trình huấn luyện model: 
+1. Chuẩn bị dữ liệu
+Thu thập, tổng hợp và tiền xử lý dữ liệu (loại bỏ lỗi, chuẩn hóa, tạo prompt, chia train/eval).
+2. Tải mô hình nền (Base Model)
+Lựa chọn và tải mô hình nền phù hợp (ví dụ: Llama, GPT, BERT...).
+3. Tiền xử lý dữ liệu huấn luyện
+Tokenize dữ liệu, padding/truncation, chuyển thành định dạng phù hợp cho mô hình.
+Cấu hình huấn luyện
+4. Thiết lập các tham số: batch size, learning rate, optimizer, số bước, scheduler, v.v.
+(Nếu cần) Cấu hình các kỹ thuật tối ưu như LoRA, lượng tử hóa, gradient checkpointing...
+5. Huấn luyện mô hình
+Đưa dữ liệu vào mô hình, thực hiện quá trình học (fine-tuning hoặc training from scratch).
+Đánh giá mô hình trên tập validation/eval định kỳ.
+6. Lưu và xuất mô hình
+Lưu checkpoint, mô hình cuối cùng, tokenizer.
+(Nếu cần) Merge các trọng số phụ (như LoRA) vào mô hình chính.
+Đẩy mô hình lên kho lưu trữ (HuggingFace Hub, local, cloud...).
+7. Giải phóng tài nguyên
+Dọn dẹp bộ nhớ RAM/GPU, xóa các biến không cần thiết.
+
+Cụ thể trong model này: 
+## 1. Đầu vào (Inputs)
+
+- model_path: Đường dẫn tới mô hình đã huấn luyện hoặc repo HuggingFace để lưu/truy xuất mô hình.
+- data_path: Đường dẫn tới thư mục chứa các file transcript dạng CSV (mặc định: `/content/data/transcripts/`).
+- huggingface_token: Token xác thực để truy cập và đẩy mô hình lên HuggingFace Hub (nếu cần).
+
+---
+
+## 2. Đầu ra (Outputs)
+
+- self.model: Pipeline mô hình đã được load hoặc huấn luyện xong, sẵn sàng sinh phản hồi hội thoại. (cái này sẽ tạo model mới nêu chưa có, hoặc dùng lại nếu đã tồn tại trên hugging face của t, tên check ở file gradio)
+- Mô hình và tokenizer: Được lưu local tại `final_ckpt` và đẩy lên HuggingFace Hub tại `model_path` sau khi train.
+- Phản hồi hội thoại: Hàm `chat` trả về câu trả lời của chatbot dựa trên lịch sử hội thoại và prompt đầu vào.
+
+---
+
+## 3. Quy trình chính
+
+### a. Khởi tạo (`__init__`)
+- Kiểm tra và lấy danh sách file transcript CSV từ `data_path`.
+- Đăng nhập HuggingFace nếu có token.
+- Nếu repo mô hình đã tồn tại trên HuggingFace, load mô hình; nếu chưa, tiến hành train mới từ dữ liệu transcript.
+
+### b. Load dữ liệu (`load_data`)
+- Đọc và gộp các file CSV transcript thành một DataFrame.
+- Tiền xử lý: tính số từ mỗi câu, đánh dấu các câu trả lời của nhân vật Eleven.
+- Sinh prompt huấn luyện: mỗi prompt gồm system prompt + câu trước + câu trả lời của Eleven.
+- Chuyển thành HuggingFace Dataset để huấn luyện.
+
+### c. Huấn luyện mô hình (`train`)
+- Load mô hình base (Llama-3.2-3B-Instruct) với cấu hình 4-bit quantization.
+- Tokenize dữ liệu, chia train/eval.
+- Cấu hình LoRA (PEFT) và các tham số huấn luyện (batch size, learning rate, max steps, ...).
+- Huấn luyện bằng `SFTTrainer` (Supervised Fine-tuning).
+- Lưu checkpoint, merge LoRA weights, đẩy mô hình và tokenizer lên HuggingFace Hub.
+
+### d. Sinh hội thoại (`chat`)
+- Nhận message và history (lịch sử hội thoại).
+- Tạo danh sách messages với system prompt, các lượt hội thoại trước, và message mới.
+- Sinh phản hồi từ mô hình với các tham số sampling (max_length, temperature, top_p, ...).
+- Trả về câu trả lời cuối cùng.
+
+---
+
+## 4. Thông số huấn luyện chính (xem trong code, up lên gpt hỏi làm rõ nếu cần)
+---
+
+## 5. Các hàm chính
+
+- `CharacterChatbot.__init__`: Khởi tạo, kiểm tra dữ liệu, load/train model.
+- `CharacterChatbot.load_model`: Load pipeline mô hình từ HuggingFace.
+- `CharacterChatbot.load_data`: Đọc, xử lý transcript, sinh prompt, trả về Dataset.
+- `CharacterChatbot.train`: Huấn luyện mô hình với LoRA, lưu và đẩy lên Hub.
+- `CharacterChatbot.chat`: Sinh phản hồi hội thoại dựa trên message và history.
+
+---
+
+## 6. Tóm tắt
+
+File này xây dựng pipeline hoàn chỉnh cho chatbot nhập vai nhân vật (ví dụ Eleven) từ dữ liệu transcript, bao gồm tiền xử lý, huấn luyện LoRA trên Llama-3, lưu/đẩy mô hình, và inference hội thoại. Các tham số và quy trình đều tối ưu cho fine-tuning mô hình lớn với dữ liệu hội thoại dạng prompt-response.

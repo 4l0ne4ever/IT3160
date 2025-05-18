@@ -1,0 +1,4 @@
+Description
+
+Phần này kết hợp cả crawl data và clean data 
+Phần này đơn giản chỉ sử dụng scrappy -> tự đọc

@@ -1,0 +1,60 @@
+Description
+
+Tóm tắt quy trình tổng thể
+1. Tiền xử lý dữ liệu:
+Đọc dữ liệu, tạo context, mã hóa nhãn, chia train/test, tokenize.
+2. Tính trọng số lớp:
+Đảm bảo mô hình học tốt hơn với dữ liệu mất cân bằng.
+3. Huấn luyện mô hình:
+Sử dụng CustomTrainer với trọng số lớp, đánh giá bằng accuracy.
+4. Lưu và tải mô hình:
+Lưu mô hình/tokenizer, đẩy lên HuggingFace Hub, tải lại khi cần.
+5. Dự đoán:
+Nhận context, trả về nhãn dự đoán.
+
+Áp dụng:
+1. Khởi tạo LocationClassifier
+- Xác định thiết bị (CPU/GPU/MPS).
+- Tải tokenizer.
+- Nếu model chưa tồn tại trên HuggingFace Hub:
+    + Đọc và xử lý dữ liệu (load_data).
+    + Tính trọng số lớp bằng get_class_weights (từ training_utils.py).
+    + Huấn luyện mô hình bằng CustomTrainer (từ custom_trainer.py).
+2. Tiền xử lý dữ liệu (load_data)
+- Đọc file dữ liệu JSON.
+- Tạo cột context, mã hóa nhãn, chia train/test.
+- Tokenize dữ liệu.
+- Trả về dataset đã sẵn sàng cho huấn luyện.
+3. Tính trọng số lớp (get_class_weights)
+- Nhận DataFrame, trả về tensor trọng số lớp cho từng nhãn.
+4. Huấn luyện mô hình (train_model)
+
+- Khởi tạo mô hình và tokenizer.
+- Tạo đối tượng CustomTrainer với các tham số:
+    + Model, tokenizer, datasets, class weights, metrics.
+- Gọi trainer.train() để huấn luyện.
+- Lưu mô hình và tokenizer, đẩy lên HuggingFace Hub.
+5. Tùy chỉnh loss function (CustomTrainer)
+- Khi huấn luyện, loss được tính bằng CrossEntropyLoss với trọng số lớp.
+- Đảm bảo dữ liệu và trọng số ở đúng device.
+6. Dự đoán (classify_location)
+- Nhận context, gọi pipeline đã huấn luyện, trả về nhãn dự đoán.
+
+Sơ đồ luồng dữ liệu & gọi hàm: 
+location_classifier.py
+    |
+    |---> load_data() --------------> (tiền xử lý, mã hóa nhãn, tokenize)
+    |
+    |---> get_class_weights() ------> (từ training_utils.py)
+    |
+    |---> train_model()
+            |
+            |---> CustomTrainer() --> (từ custom_trainer.py, sử dụng class_weights)
+            |         |
+            |         |---> compute_loss() (tùy chỉnh loss function)
+            |
+            |---> compute_metrics() --> (từ training_utils.py)
+    |
+    |---> load_model() --------------> (pipeline dự đoán)
+    |
+    |---> classify_location() --------> (dự đoán nhãn)
