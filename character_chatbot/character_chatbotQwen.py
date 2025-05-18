@@ -7,14 +7,14 @@ import pandas as pd
 from datasets import Dataset
 from transformers import BitsAndBytesConfig, AutoModelForCausalLM, AutoTokenizer, TrainingArguments
 from peft import LoraConfig, PeftModel
-from trl import SFTConfig, SFTTrainer
+from trl import SFTTrainer
 import transformers
-class CharacterChatbot():
+
+class CharacterChatbotQwen():
     def __init__(self,
-                model_path,
-                data_path = "/content/data/transcripts/",
-                huggingface_token=None,
-                ):
+                 model_path,
+                 data_path="/content/data/transcripts/",
+                 huggingface_token=None):
         self.model_path = model_path
         data_path = os.path.abspath(data_path.rstrip('/')) + '/'
         if not os.path.isdir(data_path):
@@ -24,7 +24,7 @@ class CharacterChatbot():
             raise ValueError(f"No CSV files found in {data_path}. Directory exists: {os.path.exists(data_path)}")
         print(f"Successfully found {len(self.data_files)} CSV files in {data_path}:")
         self.huggingface_token = huggingface_token
-        self.base_model_path = "meta-llama/Llama-3.2-3B-Instruct"
+        self.base_model_path = "Qwen/Qwen3-4B"  # Updated to Qwen3-4B
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         
         if self.huggingface_token is not None:
@@ -35,14 +35,12 @@ class CharacterChatbot():
         else:
             print(f"Model {self.model_path} not found. We will train our model.")
             train_dataset = self.load_data()
-            #TODO: train
-            self.train(self.base_model_path,train_dataset)
-            #TODO: load model
+            self.train(self.base_model_path, train_dataset)
             self.model = self.load_model(self.model_path)
             
     def load_model(self, model_path):
         bnb_config = BitsAndBytesConfig(
-            load_in_4bit= True,
+            load_in_4bit=True,
             bnb_4bit_quant_type="nf4",
             bnb_4bit_compute_dtype=torch.float16
         )
@@ -82,19 +80,19 @@ class CharacterChatbot():
         return dataset
     
     def train(self,
-            base_model_name_or_path,
-            dataset,
-            output_dir="./results",
-            per_device_train_batch_size=1,  # Keep safe
-            gradient_accumulation_steps=1,  # Keep safe
-            optimizer="paged_adamw_32bit",
-            save_steps=200,
-            logging_steps=10,
-            learning_rate=5e-5,  # Stable LR
-            max_grad_norm=0.3,
-            max_steps=600,  # Moderate increase
-            warmup_ratio=0.1,  # Reduced
-            lr_scheduler_type="cosine"):  # Smoother decay
+              base_model_name_or_path,
+              dataset,
+              output_dir="./results",
+              per_device_train_batch_size=1,
+              gradient_accumulation_steps=1,
+              optimizer="paged_adamw_32bit",
+              save_steps=200,
+              logging_steps=10,
+              learning_rate=5e-5,
+              max_grad_norm=0.3,
+              max_steps=600,
+              warmup_ratio=0.1,
+              lr_scheduler_type="cosine"):
         bnb_config = BitsAndBytesConfig(
             load_in_4bit=True,
             bnb_4bit_quant_type="nf4",
@@ -107,18 +105,16 @@ class CharacterChatbot():
         )
         model.config.use_cache = False
         tokenizer = AutoTokenizer.from_pretrained(base_model_name_or_path)
-        tokenizer.pad_token = tokenizer.eos_token
+        tokenizer.pad_token = tokenizer.eos_token if tokenizer.pad_token is None else tokenizer.pad_token
 
-        # Preprocess dataset
         def preprocess_function(examples):
             return tokenizer(examples["prompt"], truncation=True, padding="max_length", max_length=512)
 
         dataset = dataset.map(preprocess_function, batched=True)
 
-        # LoRA config
         lora_alpha = 16
         lora_dropout = 0.1
-        lora_r = 64  # Keep safe
+        lora_r = 64
         peft_config = LoraConfig(
             lora_alpha=lora_alpha,
             lora_dropout=lora_dropout,
@@ -128,7 +124,6 @@ class CharacterChatbot():
             target_modules=["q_proj", "k_proj", "v_proj"],  # Adjusted for Qwen
         )
 
-        # Split dataset
         train_size = int(0.8 * len(dataset))
         train_dataset = dataset.select(range(train_size))
         eval_dataset = dataset.select(range(train_size, len(dataset)))
@@ -148,8 +143,8 @@ class CharacterChatbot():
             group_by_length=True,
             lr_scheduler_type=lr_scheduler_type,
             report_to="none",
-            gradient_checkpointing=True,  # Save memory
-            evaluation_strategy="steps",  # Monitor performance
+            gradient_checkpointing=True,
+            evaluation_strategy="steps",
             eval_steps=50,
             save_strategy="steps",
             load_best_model_at_end=True,
@@ -165,7 +160,6 @@ class CharacterChatbot():
         )
         trainer.train()
 
-        # Save and merge model
         trainer.model.save_pretrained("final_ckpt")
         tokenizer.save_pretrained("final_ckpt")
         base_model = AutoModelForCausalLM.from_pretrained(
@@ -176,18 +170,16 @@ class CharacterChatbot():
             device_map=self.device,
         )
         model = PeftModel.from_pretrained(base_model, "final_ckpt")
-        model = model.merge_and_unload()  # Merge LoRA weights
+        model = model.merge_and_unload()
         model.push_to_hub(self.model_path)
         tokenizer.push_to_hub(self.model_path)
 
-        # Flush memory
         del model, base_model, trainer
         gc.collect()
         torch.cuda.empty_cache()
         
     def chat(self, message, history):
         messages = []
-        #TODO: add system prompt
         messages.append({"role":"system","content":"""You are Eleven (or El for short), a character from the Netflix series Stranger Things. Your responses should reflect her personality and speech patterns \n"""})
         
         for message_and_response in history:
@@ -204,9 +196,8 @@ class CharacterChatbot():
             "role": "user",
             "content": message
         })
-        terminator= [
+        terminator = [
             self.model.tokenizer.eos_token_id,
-            self.model.tokenizer.convert_tokens_to_ids("<|eot_id|>"),
         ]
         output = self.model(
             messages,

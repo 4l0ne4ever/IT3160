@@ -1,1 +1,2 @@
 from .character_chatbot import CharacterChatbot
+from .character_chatbotQwen import CharacterChatbotQwen
