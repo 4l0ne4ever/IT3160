@@ -1,0 +1,7 @@
+[
+    {
+        "message": "Chuỗi văn bản chứa tin nhắn",
+        "chat_response": " Chuỗi văn bản chứa câu trả lời của chatbot",
+        "solid_response": "Chuỗi văn bản chứa câu trả lời chuẩn (ground-truth)"
+    }
+]
