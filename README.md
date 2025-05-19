@@ -20,23 +20,15 @@ data collection to user interface deployment.
 Proposed Method:
 The method is divided into key steps:
 
-1. Data Collection:
-- Use Scrapy to scrape data from the web (subtitles, transcripts, characters, locations) related to Stranger Things.
-- Filter data relevant to the target character (e.g., Eleven, Dustin).
-
-2. Character Trait Analysis:
-- Use SpaCy for Named Entity Recognition (NER) and syntactic parsing to extract distinctive vocabulary, phrases, and speaking style.
-- Apply a Text Classifier to categorize emotions or topics in the character’s dialogues.
-
-3. Integration of Large Language Model (LLM):
+1. Integration of Large Language Model (LLM):
 - Use an LLM as the base for text generation.
 - Provide contextual prompts or fine-tune the model using character-specific data to ensure appropriate responses.
 
-4. User Interaction Handling:
+2. User Interaction Handling:
 - Analyze user input via NLP to understand intent.
 - Generate responses using the LLM and character profile.
 
-5. Interface Deployment:
+3. Interface Deployment:
 - Use Gradio to build a web interface, display the chatbot, and allow users to interact directly.
 
 Technologies Used:
