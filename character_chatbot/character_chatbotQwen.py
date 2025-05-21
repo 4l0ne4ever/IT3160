@@ -209,7 +209,7 @@ class CharacterChatbotQwen():
         ]
         output = self.model(
             messages,
-            max_length=512,
+            max_new_tokens=512,
             eos_token_id=terminator,
             do_sample=True,
             temperature=0.6,
