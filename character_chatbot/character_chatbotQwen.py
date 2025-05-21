@@ -24,7 +24,7 @@ class CharacterChatbotQwen():
             raise ValueError(f"No CSV files found in {data_path}. Directory exists: {os.path.exists(data_path)}")
         print(f"Successfully found {len(self.data_files)} CSV files in {data_path}:")
         self.huggingface_token = huggingface_token
-        self.base_model_path = "Qwen/Qwen3-4B"  # Updated to Qwen3-4B
+        self.base_model_path = "Qwen/Qwen3-4B"  # Confirmed model ID
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         
         if self.huggingface_token is not None:
@@ -98,11 +98,15 @@ class CharacterChatbotQwen():
             bnb_4bit_quant_type="nf4",
             bnb_4bit_compute_dtype=torch.float16
         )
-        model = AutoModelForCausalLM.from_pretrained(
-            base_model_name_or_path,
-            quantization_config=bnb_config,
-            trust_remote_code=True,
-        )
+        try:
+            model = AutoModelForCausalLM.from_pretrained(
+                base_model_name_or_path,
+                quantization_config=bnb_config,
+                trust_remote_code=True,
+            )
+        except Exception as e:
+            print(f"Error loading model {base_model_name_or_path}: {e}")
+            raise
         model.config.use_cache = False
         tokenizer = AutoTokenizer.from_pretrained(base_model_name_or_path)
         tokenizer.pad_token = tokenizer.eos_token if tokenizer.pad_token is None else tokenizer.pad_token
@@ -121,35 +125,39 @@ class CharacterChatbotQwen():
             r=lora_r,
             bias="none",
             task_type="CAUSAL_LM",
-            target_modules=["q_proj", "k_proj", "v_proj"],  # Adjusted for Qwen
+            target_modules=["q_proj", "k_proj", "v_proj"],
         )
 
         train_size = int(0.8 * len(dataset))
         train_dataset = dataset.select(range(train_size))
         eval_dataset = dataset.select(range(train_size, len(dataset)))
 
-        training_args = TrainingArguments(
-            output_dir=output_dir,
-            per_device_train_batch_size=per_device_train_batch_size,
-            gradient_accumulation_steps=gradient_accumulation_steps,
-            optim=optimizer,
-            save_steps=save_steps,
-            logging_steps=logging_steps,
-            learning_rate=learning_rate,
-            fp16=True,
-            max_grad_norm=max_grad_norm,
-            max_steps=max_steps,
-            warmup_ratio=warmup_ratio,
-            group_by_length=True,
-            lr_scheduler_type=lr_scheduler_type,
-            report_to="none",
-            gradient_checkpointing=True,
-            evaluation_strategy="steps",
-            eval_steps=50,
-            save_strategy="steps",
-            load_best_model_at_end=True,
-            metric_for_best_model="eval_loss",
-        )
+        try:
+            training_args = TrainingArguments(
+                output_dir=output_dir,
+                per_device_train_batch_size=per_device_train_batch_size,
+                gradient_accumulation_steps=gradient_accumulation_steps,
+                optim=optimizer,
+                save_steps=save_steps,
+                logging_steps=logging_steps,
+                learning_rate=learning_rate,
+                fp16=True,
+                max_grad_norm=max_grad_norm,
+                max_steps=max_steps,
+                warmup_ratio=warmup_ratio,
+                group_by_length=True,
+                lr_scheduler_type=lr_scheduler_type,
+                report_to="none",
+                gradient_checkpointing=True,
+                eval_strategy="steps",  # Updated from evaluation_strategy
+                eval_steps=50,
+                save_strategy="steps",
+                load_best_model_at_end=True,
+                metric_for_best_model="eval_loss",
+            )
+        except Exception as e:
+            print(f"Error in TrainingArguments: {e}")
+            raise
 
         trainer = SFTTrainer(
             model=model,

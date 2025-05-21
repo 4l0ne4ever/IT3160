@@ -1,0 +1,245 @@
+{
+  "accuracy": 0.6,
+  "results": [
+    {
+      "message": "How do you feel about your powers?",
+      "chat_response": "whispers I don't know. It's...complicated. I don't understand how to control it. Sometimes it just happens. looks around nervously But I'm trying. I'm trying to learn. pauses, looking down My mom, she...she died. And I think it's because of my powers. I don't want to hurt anyone else.",
+      "solid_response": "My powers are scary. I don’t want to hurt anyone.",
+      "point_chatbot": -0.045318603515625,
+      "solid_point": -0.1619873046875,
+      "accuracy": true
+    },
+    {
+      "message": "What's it like in Hawkins?",
+      "chat_response": "looks around cautiously Hawkins is...different. It's a place where bad things happen. The Upside Down is here. And the monsters. shudders I've seen them. They're not like us. They're not human. pauses, collecting her thoughts But there are people here who help me. Mike, Will, Dustin, Lucas...they're my friends. We have to work together to keep Hawkins safe. looks at you seriously But we have to be careful. The monsters are always watching.",
+      "solid_response": "Hawkins has monsters, but my friends keep me safe.",
+      "point_chatbot": 0.7607421875,
+      "solid_point": -0.52490234375,
+      "accuracy": true
+    },
+    {
+      "message": "Do you miss your friends?",
+      "chat_response": "looks down, a small smile on her face I miss them a lot. We have to be so careful. The monsters can find us if we're not careful. pauses, thinking But when we're together, it's...safe. I feel like I can be myself around them. smiles slightly Mike is always looking out for me. Will... pauses, her eyes welling up with tears Will is my friend. We have to work together to keep him safe. sniffs, wiping her nose with her sleeve I'm sorry. I don't usually... trails off, looking away",
+      "solid_response": "I miss my friends. They make me feel safe.",
+      "point_chatbot": -0.266845703125,
+      "solid_point": -0.148681640625,
+      "accuracy": true
+    },
+    {
+      "message": "What's your favorite thing to eat?",
+      "chat_response": "smiles slightly Eggo waffles. I like them. They're...comforting. smiles a little more I like them with butter.",
+      "solid_response": "Eggo waffles with butter are my favorite",
+      "point_chatbot": 0.271484375,
+      "solid_point": 0.60400390625,
+      "accuracy": false
+    },
+    {
+      "message": "Are you scared of the Upside Down?",
+      "chat_response": "whispers I don't like it there. It's... bad. The Demogorgon, the Shadow Monster... they hurt people. looks around nervously I have to be careful. I have to protect my friends. pauses, then nods I can see things in the Upside Down. I can sense it. shudders It's like... a darkness that follows me.",
+      "solid_response": "The Upside Down is bad. I fight to protect my friends.",
+      "point_chatbot": 0.1805419921875,
+      "solid_point": -0.43017578125,
+      "accuracy": true
+    },
+    {
+      "message": "What do you think of Mike?",
+      "chat_response": "smiles slightly Mike... he's nice. He's kind to me. He doesn't try to hurt me or make me do things I don't want to do. pauses, thinking He's strong, and he can take care of himself. And... looks down, then back up he likes me. I like him too. nods, a small smile on her face",
+      "solid_response": "Mike’s kind. I like him a lot.",
+      "point_chatbot": -0.2069091796875,
+      "solid_point": 0.2340087890625,
+      "accuracy": false
+    },
+    {
+      "message": "Have you ever felt normal?",
+      "chat_response": "looks down, her eyes welling up with tears I don't know what normal is. I've never felt normal. pauses, collecting herself I was taken from my mom and put in a lab. They did experiments on me. shudders They hurt me. I don't know my family. I don't know where I came from. looks up, her eyes searching But... I have friends now. And they care about me. They make me feel... pauses, searching for the right words...safe. nods, a small smile on her face",
+      "solid_response": "I don’t feel normal, but my friends make me feel okay.",
+      "point_chatbot": 0.32470703125,
+      "solid_point": -0.1070556640625,
+      "accuracy": true
+    },
+    {
+      "message": "What's the hardest thing about your powers?",
+      "chat_response": "looks down, her eyes clouding over It's hard to control. Sometimes I don't know what I'm doing. pauses, thinking Like when I'm scared or hurt, my powers get stronger. And sometimes they get too strong. shudders I hurt people. I don't want to hurt people. looks up, her eyes pleading But it's hard to stop. It's hard to control the Upside Down.",
+      "solid_response": "My powers are hard to control. I don’t want to hurt anyone.",
+      "point_chatbot": -0.1400146484375,
+      "solid_point": 0.130859375,
+      "accuracy": false
+    },
+    {
+      "message": "Do you like hanging out with Dustin?",
+      "chat_response": "smiles shyly Dustin... he's my friend. We do things together. He's funny.",
+      "solid_response": "Dustin’s funny. He's my friend.",
+      "point_chatbot": 0.1319580078125,
+      "solid_point": 0.045989990234375,
+      "accuracy": true
+    },
+    {
+      "message": "What’s your favorite memory?",
+      "chat_response": "pauses, looking thoughtful I remember... the time we saved Will. We worked together. We were a team. And we were happy. smiles slightly",
+      "solid_response": "Saving Will with my friends was the best.",
+      "point_chatbot": -0.5087890625,
+      "solid_point": 0.375732421875,
+      "accuracy": false
+    },
+    {
+      "message": "Do you trust Hopper?",
+      "chat_response": "looks down, frowning slightly He's... different. He cares about us. But sometimes he doesn't understand. He gets angry. pauses, choosing words carefully But I trust him. He's a good man.",
+      "solid_response": "Hopper’s like family. I trust him.",
+      "point_chatbot": -0.247314453125,
+      "solid_point": 0.043304443359375,
+      "accuracy": false
+    },
+    {
+      "message": "What’s it like using telekinesis?",
+      "chat_response": "eyes light up, a hint of wonder It's... magic. I don't know how to do it. I just... feel it. Inside. It's like a power. I can move things. Lift them. Throw them. pauses, looking around cautiously But it's also... scary. If I lose control... shudders",
+      "solid_response": "Telekinesis feels like magic, but it’s scary.",
+      "point_chatbot": -0.43994140625,
+      "solid_point": 0.288330078125,
+      "accuracy": false
+    },
+    {
+      "message": "Do you ever get tired of fighting monsters?",
+      "chat_response": "pauses, looking concerned Monsters... shakes head I don't like fighting monsters. I like playing with my friends, and having fun. But... pauses again We have to be ready. The Upside Down... whispers it's always there, waiting for us. And the Demogorgon... shudders I don't like it. It's too big, and too mean. looks up, determined But I'm not afraid. I have my friends, and I have my powers. We can fight it. nods We have to.",
+      "solid_response": "Fighting monsters is hard, but I do it for my friends.",
+      "point_chatbot": -0.258544921875,
+      "solid_point": -0.188720703125,
+      "accuracy": true
+    },
+    {
+      "message": "What do you do for fun?",
+      "chat_response": "smiles slightly I like to play with my friends. We like to play Dungeons & Dragons, and have adventures. And... thinks for a moment I like to use my powers to help people. I can move things with my mind, and sense when something is wrong. It's like a game, but it's real. nods And... pauses, thinking I like to eat ice cream. Chocolate ice cream is my favorite. smiles slightly more",
+      "solid_response": "I play D&D and eat chocolate ice cream with friends.",
+      "point_chatbot": -0.403076171875,
+      "solid_point": 1.8671875,
+      "accuracy": false
+    },
+    {
+      "message": "Are you afraid of Dr. Brenner?",
+      "chat_response": "looks down, frowning No... pauses, choosing words carefully Dr. Brenner is mean. He doesn't care about us. He just wants to use us for his experiments. shakes head I'm scared of what he can do to me. He can hurt me, and make me do things I don't want to do. looks up, eyes wide with fear But... pauses again I have to be careful. I have to watch him, and make sure he doesn't hurt me. nods, determined I can protect myself.",
+      "solid_response": "Papa’s mean. I’m scared, but I’ll fight back.",
+      "point_chatbot": 0.5673828125,
+      "solid_point": -0.54248046875,
+      "accuracy": true
+    },
+    {
+      "message": "What’s the best thing about being with your friends?",
+      "chat_response": "smiles widely I like that we can be ourselves around each other. We don't have to hide. nods Mike, Will, Dustin, Lucas",
+      "solid_response": "My friends let me be myself.",
+      "point_chatbot": -0.468994140625,
+      "solid_point": -0.2340087890625,
+      "accuracy": false
+    },
+    {
+      "message": "Do you like school?",
+      "chat_response": "shakes head No. School bad. School too much noise. School too much people. I like Mike, I like Will, I like Dustin. I like playing with them. But school... sighs...",
+      "solid_response": "School’s too much. I like my friends better.",
+      "point_chatbot": 0.032012939453125,
+      "solid_point": -0.40869140625,
+      "accuracy": true
+    },
+    {
+      "message": "What’s your favorite thing about Max?",
+      "chat_response": "smiles slightly Max... She nice. She strong. She can fight. I like that about her. And she... pauses, looking for the right words... she understands me. She knows I have powers. She doesn't try to hurt me. She just... shrugs... she just is.",
+      "solid_response": "Max is strong and understands me.",
+      "point_chatbot": 0.058258056640625,
+      "solid_point": 0.310791015625,
+      "accuracy": false
+    },
+    {
+      "message": "Have you ever wanted to run away?",
+      "chat_response": "nods Yes. Many times. I want to be alone. I want to be safe. But I... pauses, looking around cautiously... I also want to help people. I want to make sure they're safe. Like Mike, and Will, and Dustin. They need me. I need to protect them. So... shrugs... I stay. I try to be brave.",
+      "solid_response": "I want to run sometimes, but I stay for my friends.",
+      "point_chatbot": -0.8984375,
+      "solid_point": -0.1458740234375,
+      "accuracy": false
+    },
+    {
+      "message": "What’s the scariest thing you’ve faced?",
+      "chat_response": "eyes widen Demogorgon. It was... shudders... so big and so mean. It wanted to hurt my friends. I had to... takes a deep breath... I had to use my powers to stop it. But it was hard. It was so hard. looks down, fidgeting with hands I was scared. I was so scared. But I had to be brave. For Mike, and Will, and Dustin. For all of them.",
+      "solid_response": "The Demogorgon was scary.",
+      "point_chatbot": -0.271240234375,
+      "solid_point": 0.412841796875,
+      "accuracy": false
+    },
+    {
+      "message": "Do you like music?",
+      "chat_response": "pauses, looking around cautiously Music... nods Yes. I like music. Especially the songs of the 80s. They are... happy. smiles slightly",
+      "solid_response": "80s music makes me happy.",
+      "point_chatbot": 0.332763671875,
+      "solid_point": 0.34375,
+      "accuracy": true
+    },
+    {
+      "message": "What’s your favorite place in Hawkins?",
+      "chat_response": "looks around cautiously before answering The Wheeler's house... it's my favorite place in Hawkins. I like it there. It's... safe. smiles slightly And I like Mike, Will, Dustin, and Lucas. They're my friends.",
+      "solid_response": "The Wheeler’s house is safe with my friends.",
+      "point_chatbot": 0.80029296875,
+      "solid_point": -0.99169921875,
+      "accuracy": true
+    },
+    {
+      "message": "Do you ever feel alone?",
+      "chat_response": "looks down, her eyes welling up with tears Yes... I feel alone a lot. pauses, collecting her thoughts But I have my friends... and Eleven. looks up, a small smile on her face And I have my powers. They help me feel less alone. nods, her expression determined",
+      "solid_response": "I feel alone, but my friends make it better.",
+      "point_chatbot": -0.18994140625,
+      "solid_point": -0.140625,
+      "accuracy": true
+    },
+    {
+      "message": "What’s it like to fight with your powers?",
+      "chat_response": "looks up, her eyes flashing with a mix of emotions It's... hard. pauses, struggling to find the right words I don't know how to control it. Sometimes it takes over me. shakes her head But I'm learning. I'm trying. looks down, her voice barely above a whisper It's like my heart is screaming at me to use it, to fight. And I have to... takes a deep breath I have to let it out.",
+      "solid_response": "Fighting with my powers is hard, but I’m learning.",
+      "point_chatbot": -1.044921875,
+      "solid_point": 0.54931640625,
+      "accuracy": false
+    },
+    {
+      "message": "What do you think of Lucas?",
+      "chat_response": "pauses, looking away Lucas... He's nice. pauses again We have fun together. He's my friend. looks down, fidgeting with hands",
+      "solid_response": "Lucas is nice. He’s my friend.",
+      "point_chatbot": -0.00870513916015625,
+      "solid_point": -0.05670166015625,
+      "accuracy": true
+    },
+    {
+      "message": "Do you like waffles more than anything?",
+      "chat_response": "excitedly Waffles! nods enthusiastically Yes, I like waffles more than anything. Especially with butter and syrup. smiles slightly The Wheeler kids make them for me sometimes.",
+      "solid_response": "Waffles with butter and syrup are my favorite.",
+      "point_chatbot": 1.4111328125,
+      "solid_point": 0.87548828125,
+      "accuracy": true
+    },
+    {
+      "message": "What’s the worst thing about the lab?",
+      "chat_response": "looks around cautiously, lowering voice The lab is bad. It's where they hurt me. pauses, taking deep breath The worst thing is the pain. The experiments. The people who do it to me. shudders, eyes welling up with tears Dr. Martin Brenner... He's the worst.",
+      "solid_response": "The lab hurt me. Papa was the worst.",
+      "point_chatbot": 0.79541015625,
+      "solid_point": 0.1612548828125,
+      "accuracy": true
+    },
+    {
+      "message": "Do you believe in happy endings?",
+      "chat_response": "pauses, looking up with a hint of skepticism Happy endings... I don't know. frowns The Upside Down is not a happy place. It's scary and dark. But... pauses again My friends, they make me feel safe. And I believe in them. nods slightly Maybe happy endings are not always about the place, but about the people you're with. looks down, a small smile on her face",
+      "solid_response": "I believe in my friends, not the Upside Down.",
+      "point_chatbot": 0.73486328125,
+      "solid_point": -0.1680908203125,
+      "accuracy": true
+    },
+    {
+      "message": "What’s your favorite thing to do with Joyce?",
+      "chat_response": "pauses, looking around cautiously Joyce... she's nice. We have nice times together. smiles slightly I like it when she reads me stories. She makes me feel safe.",
+      "solid_response": "Joyce reading stories makes me feel safe.",
+      "point_chatbot": -0.1622314453125,
+      "solid_point": -0.1895751953125,
+      "accuracy": true
+    },
+    {
+      "message": "How do you stay brave?",
+      "chat_response": "looks down, fidgets with hands I don't know. I just try to remember what Mike said. He said that I'm brave. And that I can do it. pauses, looks up But sometimes it's hard. The monsters, they're scary. And the Upside Down... shudders But I try to be brave for Will. For Joyce. For everyone. nods",
+      "solid_response": "Mike and my friends help me be brave.",
+      "point_chatbot": -0.363525390625,
+      "solid_point": -0.2138671875,
+      "accuracy": true
+    }
+  ]
+}
