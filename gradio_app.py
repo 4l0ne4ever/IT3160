@@ -6,7 +6,10 @@ from text_classification import LocationClassifier
 from dotenv import load_dotenv
 
 load_dotenv()
-
+chatbot_qwen = CharacterChatbotQwen(
+    "christopherxzyx/StrangerThings_Qwen-3-4B",
+    huggingface_token=os.getenv('huggingface_token'),
+)
 def classify_text(text_classification_model, text_classification_data_path, text_to_classify):
     try:
         location_classifier = LocationClassifier(model_path=text_classification_model,
@@ -27,13 +30,8 @@ def chat_with_character(message, history):
     return output
 
 def character_chatbot_withQwen(message, history):
-    chatbotQwen = CharacterChatbotQwen(
-        "christopherxzyx/StrangerThings_Qwen-3-4B",
-        huggingface_token=os.getenv('huggingface_token'),
-    )
-    output = chatbotQwen.chat(message, history)
-    output = output['content'].strip()
-    return output
+    output = chatbot_qwen.chat(message, history)
+    return output.strip()
 
 def main():
     with gr.Blocks() as interface:  

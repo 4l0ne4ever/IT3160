@@ -204,11 +204,12 @@ class CharacterChatbotQwen():
             "role": "user",
             "content": message
         })
+        prompt = "\n".join([f"{msg['role']}: {msg['content']}" for msg in messages])
         terminator = [
             self.model.tokenizer.eos_token_id,
         ]
         output = self.model(
-            messages,
+            prompt,
             max_new_tokens=512,
             eos_token_id=terminator,
             do_sample=True,
@@ -216,5 +217,4 @@ class CharacterChatbotQwen():
             top_p=0.9,
         )
         
-        output_message = output[0]['generated_text'][-1]
-        return output_message
+        return output[0]['generated_text'] if isinstance(output, list) else output
