@@ -187,34 +187,37 @@ class CharacterChatbotQwen():
         torch.cuda.empty_cache()
         
     def chat(self, message, history):
-        messages = []
-        messages.append({"role":"system","content":"""You are Eleven (or El for short), a character from the Netflix series Stranger Things. Your responses should reflect her personality and speech patterns \n"""})
+        # Load tokenizer
+        tokenizer = AutoTokenizer.from_pretrained(self.model_path)
+
+        # Tạo danh sách messages
+        messages = [{"role": "system", "content": """You are Eleven (or El for short), a character from the Netflix series Stranger Things. Your responses should reflect her personality and speech patterns \n"""}]
         
-        for message_and_response in history:
-            messages.append({
-                "role": "user",
-                "content": message_and_response[0]
-            })
-            messages.append({
-                "role": "assistant",
-                "content": message_and_response[1]
-            })
-            
-        messages.append({
-            "role": "user",
-            "content": message
-        })
-        prompt = "\n".join([f"{msg['role']}: {msg['content']}" for msg in messages])
-        terminator = [
-            self.model.tokenizer.eos_token_id,
-        ]
-        output = self.model(
-            prompt,
+        for user_msg, assistant_msg in history:
+            messages.append({"role": "user", "content": user_msg})
+            messages.append({"role": "assistant", "content": assistant_msg})
+        
+        messages.append({"role": "user", "content": message})
+        
+        # Sử dụng apply_chat_template để định dạng đầu vào
+        inputs = tokenizer.apply_chat_template(messages, return_tensors="pt").to(self.device)
+        
+        # Load model directly instead of using pipeline
+        model = AutoModelForCausalLM.from_pretrained(self.model_path, device_map="auto", torch_dtype=torch.float16)
+        
+        # Tạo phản hồi
+        outputs = model.generate(
+            inputs,
             max_new_tokens=512,
-            eos_token_id=terminator,
+            eos_token_id=tokenizer.eos_token_id,
             do_sample=True,
             temperature=0.6,
             top_p=0.9,
         )
         
-        return output[0]['generated_text'] if isinstance(output, list) else output
+        # Giải mã phản hồi
+        response = tokenizer.decode(outputs[0], skip_special_tokens=True)
+        
+        # Trích xuất phần phản hồi của assistant
+        return response.split("assistant:")[-1].strip() if "assistant:" in response else response
+        
