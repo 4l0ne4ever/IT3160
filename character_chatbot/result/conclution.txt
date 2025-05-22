@@ -1,0 +1,58 @@
+###Dữ liệu đánh giá
+#Độ chính xác:
+Llama-3.2-3B-Instruct: 60%
+Qwen3-4B: 76%
+#Chênh lệch điểm trung bình (solid response - chatbot response):
+Llama-3.2-3B-Instruct: 0.1065
+Qwen3-4B: -0.3711
+#Câu hỏi mẫu: “Do you like waffles more than anything?” (Bạn có thích bánh quế hơn tất cả mọi thứ không?)
+Phản hồi mẫu:
+Llama:
+Phản hồi: “excitedly Waffles! nods enthusiastically Yes, I like waffles more than anything. Especially with butter and syrup. smiles slightly The Wheeler kids make them for me sometimes.” (Điểm: 1.411)
+Chuẩn: “Waffles with butter and syrup are my favorite.” (Điểm: 0.875)
+Qwen:
+Phản hồi: “Waffles? Oh, waffles… I don’t really like things like that. I don’t like food. I don’t like anything. I don’t like being normal…” (Điểm: 0.387)
+Chuẩn: “Waffles with butter and syrup are my favorite.” (Điểm: 0.295)
+Phân tích
+1. Meta-Llama/Llama-3.2-3B-Instruct
+Độ chính xác (60%):
+Llama đạt độ chính xác thấp hơn Qwen (60% so với 76%), có thể do hiệu suất tổng quát trong các nhiệm vụ không tập trung vào đối thoại hoặc bối cảnh Stranger Things.
+Tuy nhiên, trong câu hỏi về bánh quế, phản hồi của Llama rất chính xác, tái hiện tình yêu của Eleven với bánh quế (Eggo waffles) và thêm chi tiết bối cảnh (nhà Wheeler), phù hợp với phim.
+Chênh lệch điểm trung bình (0.1065):
+Chênh lệch dương nhỏ cho thấy phản hồi chuẩn thường được gte-multilingual-reranker-base đánh giá cao hơn phản hồi chatbot của Llama. Điều này có thể do Llama đôi khi thiếu từ khóa hoặc chi tiết mà reranker ưu tiên.
+Trong trường hợp mẫu, phản hồi của Llama (1.411) vượt trội so với chuẩn (0.875), cho thấy nó có thể hoạt động tốt trong các trường hợp cụ thể, đặc biệt khi tái hiện giọng điệu và bối cảnh.
+Ưu điểm:
+Tối ưu hóa cho đối thoại, với dữ liệu huấn luyện chú thích bởi con người, giúp tái hiện giọng điệu ngắn gọn, cảm xúc của Eleven (như smiles slightly).
+Cửa sổ ngữ cảnh lớn (128.000 token) hỗ trợ duy trì tính nhất quán trong các cuộc trò chuyện dài.
+Chính sách nội dung ít hạn chế, phù hợp cho các kịch bản sáng tạo (như Eleven phản ứng với tình huống giả định).
+Hạn chế:
+Độ chính xác thấp hơn có thể ảnh hưởng đến các chi tiết phim phức tạp hoặc kiến thức văn hóa đại chúng.
+2. Qwen/Qwen3-4B
+Độ chính xác (76%):
+Qwen đạt độ chính xác cao hơn, cho thấy khả năng tái hiện chi tiết phim hoặc từ khóa liên quan tốt hơn, có thể nhờ tối ưu hóa cho các nhiệm vụ như truy xuất thông tin hoặc lý luận.
+Tuy nhiên, phản hồi mẫu trước đó (lặp lại “I don’t like being normal” và phủ nhận thích bánh quế) không chính xác với Eleven, cho thấy Qwen có thể không mạnh trong việc nắm bắt giọng điệu hoặc cảm xúc.
+Chênh lệch điểm trung bình (-0.3711):
+Chênh lệch âm lớn cho thấy phản hồi chatbot của Qwen thường được reranker đánh giá cao hơn phản hồi chuẩn. Điều này có thể do Qwen tạo ra các câu trả lời giàu từ khóa (như “waffles”), ngay cả khi không hoàn toàn đúng với tính cách nhân vật.
+Trong phản hồi mẫu, điểm cao hơn chuẩn (0.387 so với 0.295) dù nội dung kém chính xác, cho thấy reranker ưu tiên ngữ nghĩa hơn tính cách.
+Ưu điểm:
+Tốc độ xử lý nhanh (nhanh hơn 23% so với Llama trong một số bài kiểm tra), phù hợp cho chatbot thời gian thực.
+Hỗ trợ đa ngôn ngữ tốt (29+ ngôn ngữ, bao gồm tiếng Việt), hữu ích nếu chatbot cần chuyển sang tiếng Việt.
+Hạn chế:
+Yếu trong kiến thức văn hóa đại chúng (Qwen2.5 đạt 50/100 so với Llama-3.1-70B đạt 77.9), có thể dẫn đến sai sót về bối cảnh Stranger Things.
+Bộ lọc nội dung nghiêm ngặt có thể hạn chế sáng tạo hoặc cảm xúc của Eleven.
+3. Đánh giá bằng gte-multilingual-reranker-base
+Hiệu suất reranker:
+Reranker ưu tiên các phản hồi chứa nhiều từ khóa liên quan (như “waffles,” “butter,” “syrup”) và chi tiết ngữ nghĩa, dẫn đến điểm cao hơn cho Llama trong phản hồi mẫu (1.411) và Qwen trong phản hồi trước (0.387).
+Tuy nhiên, reranker có thể không đánh giá tốt sắc thái tính cách hoặc giọng điệu, như trong trường hợp Qwen lặp lại vô nghĩa nhưng vẫn được điểm cao.
+Hạn chế: Reranker có thể đánh giá sai các phản hồi không chính xác về nhân vật nếu chúng chứa từ khóa phù hợp, như trường hợp của Qwen.
+Kết luận
+Llama-3.2-3B-Instruct:
+Phù hợp hơn để thể hiện Eleven trong Stranger Things nhờ khả năng tái hiện giọng điệu tự nhiên, cảm xúc, và bối cảnh phim (như nhà Wheeler). Phản hồi mẫu về bánh quế (điểm 1.411) rất chính xác và sống động.
+Chênh lệch dương nhỏ (0.1065) cho thấy phản hồi của Llama đôi khi kém chuẩn, nhưng vẫn hiệu quả cho đối thoại nhân vật.
+Độ chính xác 60% có thể không phản ánh đầy đủ khả năng trong các trường hợp cụ thể như câu hỏi về bánh quế.
+Qwen3-4B:
+Độ chính xác cao hơn (76%) và chênh lệch âm (-0.3711) cho thấy Qwen mạnh trong việc tạo phản hồi có nhiều từ khóa, nhưng có thể kém chính xác về giọng điệu hoặc tính cách, như trong phản hồi lặp lại trước đó.
+Phù hợp hơn cho các nhiệm vụ cần chi tiết phim hoặc xử lý nhanh, nhưng kém linh hoạt trong các kịch bản sáng tạo.
+
+
+

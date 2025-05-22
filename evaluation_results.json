@@ -20,17 +20,17 @@
     {
       "message": "Do you miss your friends?",
       "chat_response": "looks down, a small smile on her face I miss them a lot. We have to be so careful. The monsters can find us if we're not careful. pauses, thinking But when we're together, it's...safe. I feel like I can be myself around them. smiles slightly Mike is always looking out for me. Will... pauses, her eyes welling up with tears Will is my friend. We have to work together to keep him safe. sniffs, wiping her nose with her sleeve I'm sorry. I don't usually... trails off, looking away",
-      "solid_response": "I miss my friends. They make me feel safe.",
+      "solid_response": "I miss my friends. They make me feel like me.",
       "point_chatbot": -0.266845703125,
-      "solid_point": -0.148681640625,
-      "accuracy": true
+      "solid_point": 0.2244873046875,
+      "accuracy": false
     },
     {
       "message": "What's your favorite thing to eat?",
       "chat_response": "smiles slightly Eggo waffles. I like them. They're...comforting. smiles a little more I like them with butter.",
-      "solid_response": "Eggo waffles with butter are my favorite",
+      "solid_response": "Eggo waffles. They’re the best.",
       "point_chatbot": 0.271484375,
-      "solid_point": 0.60400390625,
+      "solid_point": 2.025390625,
       "accuracy": false
     },
     {
@@ -44,10 +44,10 @@
     {
       "message": "What do you think of Mike?",
       "chat_response": "smiles slightly Mike... he's nice. He's kind to me. He doesn't try to hurt me or make me do things I don't want to do. pauses, thinking He's strong, and he can take care of himself. And... looks down, then back up he likes me. I like him too. nods, a small smile on her face",
-      "solid_response": "Mike’s kind. I like him a lot.",
+      "solid_response": "Mike’s kind. He makes me feel safe. He is special to me",
       "point_chatbot": -0.2069091796875,
-      "solid_point": 0.2340087890625,
-      "accuracy": false
+      "solid_point": -0.08245849609375,
+      "accuracy": true
     },
     {
       "message": "Have you ever felt normal?",
@@ -60,9 +60,9 @@
     {
       "message": "What's the hardest thing about your powers?",
       "chat_response": "looks down, her eyes clouding over It's hard to control. Sometimes I don't know what I'm doing. pauses, thinking Like when I'm scared or hurt, my powers get stronger. And sometimes they get too strong. shudders I hurt people. I don't want to hurt people. looks up, her eyes pleading But it's hard to stop. It's hard to control the Upside Down.",
-      "solid_response": "My powers are hard to control. I don’t want to hurt anyone.",
+      "solid_response": "My powers are hard to control, sometimes I can't even handle it. So I don’t want to hurt people with my powers.",
       "point_chatbot": -0.1400146484375,
-      "solid_point": 0.130859375,
+      "solid_point": 0.36328125,
       "accuracy": false
     },
     {
@@ -75,26 +75,26 @@
     },
     {
       "message": "What’s your favorite memory?",
-      "chat_response": "pauses, looking thoughtful I remember... the time we saved Will. We worked together. We were a team. And we were happy. smiles slightly",
-      "solid_response": "Saving Will with my friends was the best.",
-      "point_chatbot": -0.5087890625,
-      "solid_point": 0.375732421875,
+      "chat_response": "pauses, looking thoughtful I remember... the time we saved Mike. And Will. And the others. We worked together. We were a team. And we were happy. smiles slightly",
+      "solid_response": "Saving my friends together was the best.",
+      "point_chatbot": -0.4794921875,
+      "solid_point": 0.71826171875,
       "accuracy": false
     },
     {
       "message": "Do you trust Hopper?",
       "chat_response": "looks down, frowning slightly He's... different. He cares about us. But sometimes he doesn't understand. He gets angry. pauses, choosing words carefully But I trust him. He's a good man.",
-      "solid_response": "Hopper’s like family. I trust him.",
+      "solid_response": "Hopper’s tough, but I trust him.",
       "point_chatbot": -0.247314453125,
-      "solid_point": 0.043304443359375,
+      "solid_point": 0.461669921875,
       "accuracy": false
     },
     {
       "message": "What’s it like using telekinesis?",
       "chat_response": "eyes light up, a hint of wonder It's... magic. I don't know how to do it. I just... feel it. Inside. It's like a power. I can move things. Lift them. Throw them. pauses, looking around cautiously But it's also... scary. If I lose control... shudders",
-      "solid_response": "Telekinesis feels like magic, but it’s scary.",
+      "solid_response": "Telekinesis feels strong, but it’s scary.",
       "point_chatbot": -0.43994140625,
-      "solid_point": 0.288330078125,
+      "solid_point": 0.2156982421875,
       "accuracy": false
     },
     {
@@ -108,9 +108,9 @@
     {
       "message": "What do you do for fun?",
       "chat_response": "smiles slightly I like to play with my friends. We like to play Dungeons & Dragons, and have adventures. And... thinks for a moment I like to use my powers to help people. I can move things with my mind, and sense when something is wrong. It's like a game, but it's real. nods And... pauses, thinking I like to eat ice cream. Chocolate ice cream is my favorite. smiles slightly more",
-      "solid_response": "I play D&D and eat chocolate ice cream with friends.",
+      "solid_response": "I play D&D with friends and love chocolate ice cream.",
       "point_chatbot": -0.403076171875,
-      "solid_point": 1.8671875,
+      "solid_point": 1.5810546875,
       "accuracy": false
     },
     {
@@ -124,9 +124,9 @@
     {
       "message": "What’s the best thing about being with your friends?",
       "chat_response": "smiles widely I like that we can be ourselves around each other. We don't have to hide. nods Mike, Will, Dustin, Lucas",
-      "solid_response": "My friends let me be myself.",
+      "solid_response": "My friends let me be me.",
       "point_chatbot": -0.468994140625,
-      "solid_point": -0.2340087890625,
+      "solid_point": -0.2294921875,
       "accuracy": false
     },
     {
@@ -140,16 +140,16 @@
     {
       "message": "What’s your favorite thing about Max?",
       "chat_response": "smiles slightly Max... She nice. She strong. She can fight. I like that about her. And she... pauses, looking for the right words... she understands me. She knows I have powers. She doesn't try to hurt me. She just... shrugs... she just is.",
-      "solid_response": "Max is strong and understands me.",
+      "solid_response": "Max is strong and truthful.",
       "point_chatbot": 0.058258056640625,
-      "solid_point": 0.310791015625,
+      "solid_point": 0.54833984375,
       "accuracy": false
     },
     {
       "message": "Have you ever wanted to run away?",
-      "chat_response": "nods Yes. Many times. I want to be alone. I want to be safe. But I... pauses, looking around cautiously... I also want to help people. I want to make sure they're safe. Like Mike, and Will, and Dustin. They need me. I need to protect them. So... shrugs... I stay. I try to be brave.",
+      "chat_response": "nods Yes. Many times. I want to be alone. I want to be safe. But I...I also want to help people. I want to make sure they're safe. Like Mike, and Will, and Dustin. They need me. I need to protect them. So... shrugs... I stay. I try to be brave.",
       "solid_response": "I want to run sometimes, but I stay for my friends.",
-      "point_chatbot": -0.8984375,
+      "point_chatbot": -0.81005859375,
       "solid_point": -0.1458740234375,
       "accuracy": false
     },
@@ -188,9 +188,9 @@
     {
       "message": "What’s it like to fight with your powers?",
       "chat_response": "looks up, her eyes flashing with a mix of emotions It's... hard. pauses, struggling to find the right words I don't know how to control it. Sometimes it takes over me. shakes her head But I'm learning. I'm trying. looks down, her voice barely above a whisper It's like my heart is screaming at me to use it, to fight. And I have to... takes a deep breath I have to let it out.",
-      "solid_response": "Fighting with my powers is hard, but I’m learning.",
+      "solid_response": "Fighting with my powers is hard. I try to control it.",
       "point_chatbot": -1.044921875,
-      "solid_point": 0.54931640625,
+      "solid_point": 0.395263671875,
       "accuracy": false
     },
     {

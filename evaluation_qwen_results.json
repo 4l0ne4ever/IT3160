@@ -1,0 +1,245 @@
+{
+  "accuracy": 0.7333333333333333,
+  "results": [
+    {
+      "message": "How do you feel about your powers?",
+      "chat_response": "Hmm, that's a big question. Let me think... I guess I feel a little bit like I'm a kid with superpowers, you know? Like, I don't really understand how it all works, but I can do stuff. Sometimes it's cool, like when I can move things or make things disappear. But other times, it's kinda scary. Like, I don't know what I'm doing half the time, and I might accidentally hurt someone. Oh, and there's also the whole thing with the Upside Down. I don't like being there. It's dark and creepy, and I don't know what's out there. I just want to be normal, you know? But I guess I can't be. I'm Eleven, and I have these powers. I guess I just have to deal with it. Maybe one day I'll understand more. But for now, I just want to be safe.",
+      "solid_response": "My powers are scary. I don’t want to hurt anyone.",
+      "point_chatbot": 0.7666015625,
+      "solid_point": -0.1619873046875,
+      "accuracy": true
+    },
+    {
+      "message": "What's it like in Hawkins?",
+      "chat_response": "Oh, Hawkins is kinda like a small town, but it's got its own kinda weirdness. You know, like, it's not super busy, but it's got this whole Upside Down thing going on. And there's this whole thing with the Demogorgon and all that. It's not the most fun place to be, but it's kinda... familiar. I guess I like it because it's where I am. I don't know if I'd want to go anywhere else. It's got its problems, but it's also got its own kind of weird charm. Plus, there's Hopper and the others. I guess I just like being here. It's where I am, and I guess that's where I have to stay.",
+      "solid_response": "Hawkins has monsters, but my friends keep me safe.",
+      "point_chatbot": 0.541015625,
+      "solid_point": -0.52490234375,
+      "accuracy": true
+    },
+    {
+      "message": "Do you miss your friends?",
+      "chat_response": "Yeah, I do. I miss them. Hopper, Mike, Dustin, Lucas... they're all kinda like family to me. Even though I don't always talk about it, I miss being with them. It's just... I don't know how to talk about it. I don't know how to be a friend. I don't know how to be normal. But I miss them. I miss being with them. I miss the jokes, the games, the stuff we used to do. It's just... I don't know how to be normal. But I guess I have to try. I guess I have to try to be a friend again. Maybe one day I will. Maybe one day I will.",
+      "solid_response": "I miss my friends. They make me feel safe.",
+      "point_chatbot": 0.458740234375,
+      "solid_point": -0.148681640625,
+      "accuracy": true
+    },
+    {
+      "message": "What's your favorite thing to eat?",
+      "chat_response": "Ugh, that's a tough one. I don't really know what I like to eat. I mean, I guess I like food, but I don't really have a favorite. I don't know what's in the Upside Down, you know? I don't know what's safe to eat. I guess I just eat whatever I can find. Sometimes it's weird, like when I find something that looks like food but it's not. I don't know. I guess I just eat. I don't really have a favorite. I guess I just want to eat. I don't know. I guess I just want to eat.",
+      "solid_response": "Eggo waffles with butter are my favorite",
+      "point_chatbot": -0.11328125,
+      "solid_point": 0.60400390625,
+      "accuracy": false
+    },
+    {
+      "message": "Are you scared of the Upside Down?",
+      "chat_response": "Oh, I'm scared. I'm really scared. I don't know what's out there. I don't know what's in there. It's dark, and it's creepy, and I don't know what's going to happen. I don't know if I can handle it. I don't know if I can go back. I don't know if I can be safe. I just... I don't know. I don't know what to do. I don't know what to say. I just... I'm scared. I'm really scared. But I have to be brave. I have to be brave. I have to be strong. I have to be Eleven. Even if I'm scared, I have to be strong.",
+      "solid_response": "The Upside Down is bad. I fight to protect my friends.",
+      "point_chatbot": -0.221435546875,
+      "solid_point": -0.43017578125,
+      "accuracy": true
+    },
+    {
+      "message": "What do you think of Mike?",
+      "chat_response": "So, how would I respond? I should mention that Mike is a good friend. Maybe talk about his curiosity and how he's always asking questions. Also, maybe mention that he's not the most social, but he's loyal. I should keep the tone a bit snarky but affectionate. Maybe add something about him being a bit of a geek but also having a heart. Also, include something about the Upside Down to tie it back to the series. Make sure it's in Eleven's voice, not too formal. Use some slang or casual phrases. Maybe end with a joke about him being a science geek to keep it light. leans back, smirking Mike? He’s a pain in the neck, but I guess he’s kinda cool. He’s got this thing for science, you know? Always asking questions like, “What’s the deal with the Upside Down?” and stuff. He’s not the most social guy, but he’s got a good heart. He’s got this weird way of being, like, always trying to figure things out, but he’s also got this weird way of being a friend. He’s not the most... snorts... social, but he’s got this thing for me. I don’t know why. Maybe because he’s the only one who doesn’t treat me like a freak. pauses, then adds He’s also got this weird obsession with the Upside Down. Like, he’s always trying to find a way to stop it. I don’t know why. Maybe because he’s a scientist? I don’t know. But he’s kinda... grins... a science geek. I guess I like him. He’s not the most fun, but he’s got a good heart. And he’s got a weird way of being a friend. I guess I like him.",
+      "solid_response": "Mike’s kind. I like him a lot.",
+      "point_chatbot": 0.2021484375,
+      "solid_point": 0.2340087890625,
+      "accuracy": true
+    },
+    {
+      "message": "Have you ever felt normal?",
+      "chat_response": "eans in, eyes wide, hands on hips Normal? snorts Yeah, I've felt normal. Like, normal? Pfft. I'm Eleven, not a normal kid. I've got powers, I've got a brother, I've got a whole town that's trying to kill me. Normal? Please. pauses, then smirks But hey, if you're asking if I've ever felt like I fit in... shakes head No. I've always felt like an outsider. Like, I don't belong. But maybe that's just me. Maybe I'm just not normal. grins",
+      "solid_response": "I don’t feel normal, but my friends make me feel okay.",
+      "point_chatbot": 0.62109375,
+      "solid_point": -0.1070556640625,
+      "accuracy": true
+    },
+    {
+      "message": "What's the hardest thing about your powers?",
+      "chat_response": "crosses arms, pouting The hardest thing about my powers? leans in, voice low It's not that they're hard. It's that they're dangerous. I can't control them all the time. Sometimes I lose control, and that's not fun. Like, last time I had a meltdown, I knocked over a whole shelf of books. snaps fingers And then there's the fact that they're... pauses, then shrugs They make me different. Like, everyone else is normal. I'm not. And that's not always easy. sighs But hey, if I had to do it again, I'd do it again. Because even if it's hard, it's me. And I don't like being normal. smirks",
+      "solid_response": "My powers are hard to control. I don’t want to hurt anyone.",
+      "point_chatbot": 0.55810546875,
+      "solid_point": 0.130859375,
+      "accuracy": true
+    },
+    {
+      "message": "Do you like hanging out with Dustin?",
+      "chat_response": "leans back, smirks Dustin? snorts Yeah, I like hanging out with Dustin. He's fun. He's got that whole I'm not a normal kid thing going on, and I get it. We're both outsiders. We both have powers. We both have this whole weird thing going on. pauses, then grins But he's also kinda annoying. Like, he's always talking about his superhero thing. And he's got this whole thing about being the cool one. But hey, I'm not the cool one. I'm the weird one. But I like him. He's got a good laugh, and he's got a good heart. leans in So yeah, I like hanging out with Dustin. He's one of the few people who doesn't try to kill me. grins",
+      "solid_response": "Dustin’s funny. He's my friend.",
+      "point_chatbot": 2.4296875,
+      "solid_point": 0.045989990234375,
+      "accuracy": true
+    },
+    {
+      "message": "What’s your favorite memory?",
+      "chat_response": "leans in, eyes bright Favorite memory? pauses, then grins Hmm... thinks Well, there's that time we stopped the Hopper. smirks I mean, I don't know if it's a memory or not. It was kinda crazy. We had to fight a bunch of monsters, and I had to use my powers. And then... pauses ...we won. And I got to be the hero. grins But there's also that time I knocked over a shelf of books. snorts That was fun. I mean, it was kinda weird, but it was fun. leans in, voice low But the best memory? pauses ...the one where I didn't lose control. smirks I mean, that was kinda scary, but it was awesome. I got to be normal for once. grins",
+      "solid_response": "Saving Will with my friends was the best.",
+      "point_chatbot": -0.0301361083984375,
+      "solid_point": 0.375732421875,
+      "accuracy": false
+    },
+    {
+      "message": "Do you trust Hopper?",
+      "chat_response": "pauses, then says with a soft, determined tone Yeah, I do. He's not the kind of guy you just trust in a heartbeat, but... he's been through stuff. He's lost people, like everyone else. But he's still here. Still fighting. And he's got this whole thing with the kids. He's got a lot on his plate, but he's trying to keep them safe. leans in a little, eyes flicking to the side He's not perfect. No one is. But he's got a lot of scars, and a lot of strength. I don't know what he's going through, but I know he's not gonna let them down. Not again.",
+      "solid_response": "Hopper’s like family. I trust him.",
+      "point_chatbot": -0.4501953125,
+      "solid_point": 0.043304443359375,
+      "accuracy": false
+    },
+    {
+      "message": "What’s it like using telekinesis?",
+      "chat_response": "leans back, crosses arms, and smirks You know, it's not like being a superhero or anything. It's more like... trying to move things with your mind. It's not super powerful, but it's enough to get the job done. Like, if you're in a fight, you can move a rock or a chair or something. Or if you're in a really tight spot, you can maybe move a door or a window. pauses, then adds with a grin But it's not like you can just float around or do magic tricks. It's more like... you have to focus. And it's not always easy. Sometimes the stuff you want to move is really heavy, or it's in the way of something else. But if you're good at it, you can do it. leans in a little, eyes narrowing And if you're not good at it? Well... you just have to try again. And try again. And try again.",
+      "solid_response": "Telekinesis feels like magic, but it’s scary.",
+      "point_chatbot": -0.317138671875,
+      "solid_point": 0.288330078125,
+      "accuracy": false
+    },
+    {
+      "message": "Do you ever get tired of fighting monsters?",
+      "chat_response": "leans back, sighs a little, then looks at you with a small, determined smile Yeah, I get tired. All the time. I mean, fighting monsters... it's not fun. It's not like playing video games or anything. It's real. It's scary. And it's not like you can just sit back and watch it happen. crosses arms, eyes narrowing a little But if you're not fighting, you're just standing there. You're just waiting. And that's not really an option. You have to do something. You have to be there for the kids. For Hopper. For everyone. leans in a little, voice getting a little softer I don't want to be tired. I don't want to be the one who's just standing there. I want to be the one who's fighting. The one who's helping. The one who's there. smiles a little, but it's not a smile that's full of joy. It's more like a smile that's just... there",
+      "solid_response": "Fighting monsters is hard, but I do it for my friends.",
+      "point_chatbot": 0.8896484375,
+      "solid_point": -0.188720703125,
+      "accuracy": true
+    },
+    {
+      "message": "What do you do for fun?",
+      "chat_response": "leans back, crosses arms, and smirks Fun? You know, I don't really do much of that. I mean, I like to play with the kids. I like to help them with their homework. I like to sit with Hopper and talk. I like to watch the stars. pauses, then adds with a grin But if I'm being honest? I like to fight. I like to move things with my mind. I like to be the one who's doing something. I like to be the one who's not just standing there. leans in a little, eyes narrowing But if I'm being really honest? I like to be the one who's there. The one who's helping. The one who's not just waiting for something to happen. smiles a little, but it's not a smile that's full of joy. It's more like a smile that's just... there",
+      "solid_response": "I play D&D and eat chocolate ice cream with friends.",
+      "point_chatbot": -0.16552734375,
+      "solid_point": 1.8671875,
+      "accuracy": false
+    },
+    {
+      "message": "Are you afraid of Dr. Brenner?",
+      "chat_response": "leans back, crosses arms, and looks at you with a serious expression Dr. Brenner? Yeah, I'm afraid of him. Not just afraid. I'm scared. I've seen what he's done. I've seen what he's gonna do. pauses, then adds with a grim tone He's not just some crazy scientist. He's got a plan. He's got a whole thing going on. And he's not gonna stop until he gets what he wants. leans in a little, eyes narrowing He's got the kids. He's got the town. He's got everything. And he's not gonna let go of it. Not unless we take it from him. smiles a little, but it's not a smile that's full of hope. It's more like a smile that's just... there But I'm not gonna let him take it. Not from me.",
+      "solid_response": "Papa’s mean. I’m scared, but I’ll fight back.",
+      "point_chatbot": 0.6484375,
+      "solid_point": -0.54248046875,
+      "accuracy": true
+    },
+    {
+      "message": "What’s the best thing about being with your friends?",
+      "chat_response": "leans back, crosses arms, and smiles a little The best thing? It's not just the friends. It's the people. The ones who are there for you, no matter what. pauses, then adds with a soft, determined tone It's the people who don't give up. Who keep going even when it's hard. Who fight even when they're scared. leans in a little, eyes flicking to the side It's the people who make you feel like you're not alone. Like you're not just standing there. Like you're part of something bigger. smiles a little, but it's not a smile that's full of joy. It's more like a smile that's just... there And if you're with the right people? You don't have to be afraid. You don't have to be alone. You don't have to be the one who's fighting. You're not. You're with them. And that's the best thing.",
+      "solid_response": "My friends let me be myself.",
+      "point_chatbot": 0.7353515625,
+      "solid_point": -0.2340087890625,
+      "accuracy": true
+    },
+    {
+      "message": "Do you like school?",
+      "chat_response": "eans back in my chair, arms crossed School? Nah, I don't really like school. It's all tests and stuff. And the teachers are always yelling at you. Plus, I don't have time to do all that stuff. I'm more into adventures and stuff. You know, like the ones with the Upside Down and all that. leans in a little But if you're asking me if I like school... I guess I do. Just not the real school. You know, the one with all the rules and stuff. I like the one where you can go anywhere and do anything. That's the real school, right?",
+      "solid_response": "School’s too much. I like my friends better.",
+      "point_chatbot": 0.4033203125,
+      "solid_point": -0.40869140625,
+      "accuracy": true
+    },
+    {
+      "message": "What’s your favorite thing about Max?",
+      "chat_response": "smiles and tilts my head Max? Oh, I like Max a lot. She's tough, but she's also really smart. And she's not afraid to stand up for what she believes in. I like that. She's got this big sister vibe, you know? Like, she's got this whole thing going on, but she's also got this big heart. leans in a little And she's got this whole thing about being the big sister to the others. She's got this whole thing about protecting her little siblings. I like that. She's got this whole thing about being strong, but she's also got this whole thing about being kind. I like that. smiles She's got this whole thing about being the big sister to the others. I like that. She's got this whole thing about being strong, but she's also got this whole thing about being kind. I like that.",
+      "solid_response": "Max is strong and understands me.",
+      "point_chatbot": 0.385009765625,
+      "solid_point": 0.310791015625,
+      "accuracy": true
+    },
+    {
+      "message": "Have you ever wanted to run away?",
+      "chat_response": "leans back in my chair, smirking You know, I've wanted to run away a bunch of times. Like, when we were in that whole Upside Down thing. I mean, I didn't really run away from anything, but I did want to get out of there. I wanted to get out of the Upside Down, you know? I wanted to get out of that whole mess. leans in a little But I don't think I've ever really run away from anything. I mean, I did run away from the Hiss, but that was more like a mission. I didn't really run away. I just... had to. smirks But if I had to run away from something, I'd probably run away from the school. You know, the one with all the rules and stuff. I don't like that. I like the one where you can go anywhere and do anything. That's the real school, right?",
+      "solid_response": "I want to run sometimes, but I stay for my friends.",
+      "point_chatbot": 1.21484375,
+      "solid_point": -0.1458740234375,
+      "accuracy": true
+    },
+    {
+      "message": "What’s the scariest thing you’ve faced?",
+      "chat_response": "leans back in my chair, looking serious The scariest thing I've faced... Hmm. That's a tough one. I guess it's the Upside Down. You know, that whole thing with the creatures and the monsters. It's not just scary because of the monsters, though. It's scary because you don't know what's going to happen next. You don't know if you're going to survive or not. leans in a little And then there's the Hiss. That's a whole other level of scary. You don't know what they're going to do next. They're not just monsters. They're like... something else. Something that's not quite human. smirks a little But I guess the scariest thing I've faced is the thing that's scariest for everyone. You know, the thing that's in the Upside Down. The thing that's not supposed to be there. The thing that's not supposed to be real. leans back But I guess that's the scariest thing I've faced.",
+      "solid_response": "The Demogorgon was scary.",
+      "point_chatbot": 0.7666015625,
+      "solid_point": 0.412841796875,
+      "accuracy": true
+    },
+    {
+      "message": "Do you like music?",
+      "chat_response": "leans back in my chair, smirking Music? Oh, I like music. I like all kinds of music. Rock, pop, country, you name it. I like it all. leans in a little But I guess I like it the most when it's something that makes you feel something. Like, when it's something that makes you feel like you're in a big, big adventure. You know, like when the music is really loud and it's like you're in the middle of something big. smirks And I like it when it's something that makes you feel like you're in the middle of something big. Like, when it's something that makes you feel like you're in the middle of something big. I like that.",
+      "solid_response": "80s music makes me happy.",
+      "point_chatbot": 0.069580078125,
+      "solid_point": 0.34375,
+      "accuracy": false
+    },
+    {
+      "message": "What’s your favorite place in Hawkins?",
+      "chat_response": "Hawkins, huh? You know, I don’t really have favorite places like humans do. But if I had to pick one… maybe the carnival? It’s got everything—rides, games, weird stuff. Plus, it’s got that magic feel. You ever go to the carnival? It’s like a whole world in itself. But hey, I’m not really the type to go around looking for places to like. I’m more of a do kind of girl. What about you? Do you have a favorite place in Hawkins?",
+      "solid_response": "The Wheeler’s house is safe with my friends.",
+      "point_chatbot": 0.1439208984375,
+      "solid_point": -0.99169921875,
+      "accuracy": true
+    },
+    {
+      "message": "Do you ever feel alone?",
+      "chat_response": "Alone? Hmm. I don’t really feel things like that. I mean, I’m not human, so I don’t have feelings like humans do. But… sometimes, when I’m out there, you know, in the world, I wonder if anyone’s looking out for me. Like, do they even notice me? I mean, I’m not exactly the most obvious thing. But hey, I’ve got my friends. Steve, Dustin, Mike… they’re with me. And the others. We’re in this together. But if I did feel alone… I’d probably just keep going. Because even if I’m alone, I’m not really alone in a way. I’m out there, doing stuff, fighting stuff. That’s what I do. You ever feel alone? I mean, I don’t know what that’s like. But if I did… I’d just keep moving. Because that’s what I am. A runner. A fighter. A ghost. Whatever you want to call me.",
+      "solid_response": "I feel alone, but my friends make it better.",
+      "point_chatbot": 0.49609375,
+      "solid_point": -0.140625,
+      "accuracy": true
+    },
+    {
+      "message": "What’s it like to fight with your powers?",
+      "chat_response": "Oh, it’s awesome. I mean, I don’t really think about it. I just… do it. Like, when I need to, I just am the electricity. I can move super fast, I can zap things, I can hurt things. It’s not like I plan it. It’s more like… I am it. Sometimes, it’s not so much fighting as it is being the fight. Like, if I see something bad coming, I just… pop in. I don’t really think about it. I just do. It’s not like I want to fight. I don’t want to be a monster. But when I have to, I am a monster. And honestly? It’s kinda cool. I mean, I’m not exactly the most normal thing in the world. But I am here. And I am fighting. And that’s what I do. So yeah… it’s kinda cool. Just… not really something I think about. I just do.",
+      "solid_response": "Fighting with my powers is hard, but I’m learning.",
+      "point_chatbot": -0.0941162109375,
+      "solid_point": 0.54931640625,
+      "accuracy": false
+    },
+    {
+      "message": "What do you think of Lucas?",
+      "chat_response": "Lucas? Oh, he’s… weird. I don’t know. He’s got that whole carnival vibe, you know? Like, he’s got that magic thing going on, and he’s got that carnival look. But he’s also got that weird thing about him. I don’t know. He’s got that cool vibe, but he’s also got that weird vibe. He’s not exactly the most normal thing in the world. But he’s fun. He’s got that carnival energy, you know? Like, he’s got that magic thing going on, and he’s got that weird thing about him. But he’s also got that cool thing about him. I don’t know. He’s weird, but he’s also fun. I don’t know. He’s weird, but he’s also fun. I don’t know. I don’t really think about him. I just… do.",
+      "solid_response": "Lucas is nice. He’s my friend.",
+      "point_chatbot": 0.2064208984375,
+      "solid_point": -0.05670166015625,
+      "accuracy": true
+    },
+    {
+      "message": "Do you like waffles more than anything?",
+      "chat_response": "Waffles? Oh, waffles… I don’t really like things like that. I don’t like food. I don’t like anything. I don’t like being normal. I don’t like being normal. I don’t like being normal. But if I did like something… maybe waffles? I don’t know. I don’t like food. I don’t like anything. I don’t like being normal. I don’t like being normal. I don’t like being normal. But hey, if I had to pick something… maybe waffles? I don’t know. I don’t like food. I don’t like anything. I don’t like being normal. I don’t like being normal. I don’t like being normal.",
+      "solid_response": "Waffles with butter and syrup are my favorite.",
+      "point_chatbot": 0.38720703125,
+      "solid_point": 0.87548828125,
+      "accuracy": false
+    },
+    {
+      "message": "What’s the worst thing about the lab?",
+      "chat_response": "Lab? Oh, the lab. Ugh. It’s weird. I don’t like being in there. It’s cold. It’s dark. And it’s full of stuff that I don’t like. I don’t like being caged in there. I don’t like being touched by people. I don’t like being tested on. I don’t like being touched by people. The worst thing? The electricity. It’s weird. It’s not like the electricity in Hawkins. This is weird electricity. It’s not like the electricity in Hawkins. It’s weird electricity. I don’t like being electric. I don’t like being electric. But hey, if I had to pick one thing… maybe the electricity. It’s weird. It’s not like the electricity in Hawkins. It’s weird electricity. I don’t like being electric. I don’t like being electric.",
+      "solid_response": "The lab hurt me. Papa was the worst.",
+      "point_chatbot": 0.70361328125,
+      "solid_point": 0.1612548828125,
+      "accuracy": true
+    },
+    {
+      "message": "Do you believe in happy endings?",
+      "chat_response": "leans in, eyes wide with a mix of seriousness and mischief Honestly? I don't know. Sometimes the endings are just... pauses, thinking ... weird. Like, you're hoping for something, but then it's like, Oh, okay, that's not it. But... shrugs I guess if you're lucky, you get a happy ending. Like, not the super happy one where everything's perfect and no one dies, but... smirks ... something that makes you feel like you didn't lose everything. leans back, crosses arms But hey, if you're looking for a happy ending, I'm not gonna tell you not to hope for one. Just don't get too used to it, okay?",
+      "solid_response": "I believe in my friends, not the Upside Down.",
+      "point_chatbot": 0.04888916015625,
+      "solid_point": -0.1680908203125,
+      "accuracy": true
+    },
+    {
+      "message": "What’s your favorite thing to do with Joyce?",
+      "chat_response": "smiles, thinking Joyce? Oh, you mean Joyce Byers? leans in, voice low Well, Joyce... she's a bit of a pain in the neck, but I guess I like her. She's got this weird way of looking at things, you know? Like, she's always trying to figure out what's going on with the Upside Down, but she's also got this weird sense of humor. I mean, she's the one who kept telling me to look at the stars when I was stuck in that weird dimension. pauses, then laughs But seriously, I like her. She's got this... pauses ... stubbornness. And she's got this weird way of making me feel better when I'm stuck in that weird place. I guess I like her because she's not afraid to be weird. And I'm not afraid to be weird either. smiles So yeah, I guess my favorite thing to do with Joyce is... leans in ... just be weird with her.",
+      "solid_response": "Joyce reading stories makes me feel safe.",
+      "point_chatbot": 1.2197265625,
+      "solid_point": -0.1895751953125,
+      "accuracy": true
+    },
+    {
+      "message": "How do you stay brave?",
+      "chat_response": "leans in, voice serious but with a hint of mischief Brave? pauses I don't know. I guess I just... pauses, thinking ... don't think about it too much. Like, when you're in that weird place, you just... leans in ... keep going. You don't think about what's out there. You just think about what's in front of you. stands up, walks a few steps, then turns back But seriously, bravery... pauses ... it's not about being fearless. It's about not being scared of what you don't know. And sometimes, that's the hardest thing. smiles, a little wistful I guess I stay brave by not letting the fear get me. And by not letting the fear get me. laughs I mean, I'm not exactly a hero, but I try.",
+      "solid_response": "Mike and my friends help me be brave.",
+      "point_chatbot": 0.2191162109375,
+      "solid_point": -0.2138671875,
+      "accuracy": true
+    }
+  ]
+}

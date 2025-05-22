@@ -7,7 +7,7 @@ device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 print(f"Using device: {device}")
 
 # Tải dữ liệu từ file JSON
-with open("/Users/duongcongthuyet/Downloads/workspace/AI /IT3180/character_chatbot/result/chatbot_results.json", "r", encoding="utf-8") as f:
+with open("/Users/duongcongthuyet/Downloads/workspace/AI /IT3180/character_chatbot/result/qwen_results.json", "r", encoding="utf-8") as f:
     test_data = json.load(f)
 
 # Tải mô hình reranker
@@ -69,7 +69,7 @@ accuracy = correct / len(test_data)
 print(f"Chatbot accuracy: {accuracy:.2%}")
 
 # Lưu kết quả đánh giá
-with open("evaluation_results.json", "w", encoding="utf-8") as f:
+with open("evaluation_qwen_results.json", "w", encoding="utf-8") as f:
     json.dump({"accuracy": accuracy, "results": results}, f, ensure_ascii=False, indent=2)
 
 # Giải phóng tài nguyên
@@ -77,8 +77,3 @@ del model
 del tokenizer
 torch.mps.empty_cache() if device.type == "mps" else None
 
-# Evaluate the model
-with open("/Users/duongcongthuyet/Downloads/workspace/AI /IT3180/evaluation_results.json", "r", encoding="utf-8") as f:
-    data = json.load(f)
-avg_diff = sum(r["solid_point"] - r["point_chatbot"] for r in data["results"]) / len(data["results"])
-print(f"Chênh lệch điểm trung bình (chuẩn - chatbot): {avg_diff:.4f}")
